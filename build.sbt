@@ -19,3 +19,13 @@ lazy val data = project
       , "org.gavaghan" % "geodesy" % "1.1.3"
     )
   )
+
+lazy val circe = project
+  .dependsOn(data)
+  .settings(
+    libraryDependencies ++= Seq(
+      "io.circe" %% "circe-core" % circeVer
+      , "io.circe" %% "circe-generic" % circeVer
+      , "io.circe" %% "circe-parser" % circeVer
+    )
+  )

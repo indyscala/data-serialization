@@ -17,9 +17,9 @@ object Telemetry {
   private def reverseGeocodeUrl(apiKey: String, lat: Double, lon: Double) = s"https://us1.locationiq.com/v1/reverse.php?key=$apiKey&lat=$lat&lon=$lon&format=json"
 
   /**
-   * @return [[Seq]] of telemetry samples from telemetry.csv file
+   * @return [[List]] of telemetry samples from telemetry.csv file
    */
-  def samples(): Seq[Sample] = getClass.getResource("/telemetry.csv").asUnsafeCsvReader[Sample](TelemetryHeaders).toSeq
+  def samples(): List[Sample] = getClass.getResource("/telemetry.csv").asUnsafeCsvReader[Sample](TelemetryHeaders).toList
 
   /**
    * Ingest `TN_to_IN.csv` file with basic GPS data from sample trip and augment
