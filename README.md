@@ -5,6 +5,7 @@ formats from Scala.  Examples include:
 
 * JSON - [circe]
 * [Protocol Buffers] - [ScalaPB]
+* XML - [xtract]
 
 
 ## Converting GPX file to CSV
@@ -23,3 +24,4 @@ where `API_KEY` is a [LocationIQ] API key.
 [LocationIQ]: https://locationiq.com/
 [Protocol Buffers]: https://developers.google.com/protocol-buffers
 [ScalaPB]: https://scalapb.github.io/
+[xtract]: https://github.com/lucidsoftware/xtract

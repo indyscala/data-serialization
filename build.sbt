@@ -42,3 +42,12 @@ lazy val scala_pb = (project in file("scalapb"))
       , "io.circe" %% "circe-parser" % circeVer
     )
   )
+
+lazy val xtract = project
+  .dependsOn(data)
+  .settings(
+    libraryDependencies ++= Seq(
+      "com.lucidchart" %% "xtract" % "2.2.1"
+      , "org.scala-lang.modules" %% "scala-xml" % "1.2.0"
+    )
+  )
