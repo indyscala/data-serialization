@@ -30,7 +30,7 @@ lazy val circe = project
     )
   )
 
-lazy val protobuf = project
+lazy val scala_pb = (project in file("scalapb"))
   .dependsOn(data)
   .settings(
     PB.targets in Compile := Seq(

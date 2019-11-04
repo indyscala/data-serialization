@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package org.indyscala.dataser.protobuf;
+package org.indyscala.dataser.scalapb;
 
 message Timestamp {
   int64 msSinceEpoch = 1;

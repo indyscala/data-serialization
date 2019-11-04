@@ -1,12 +1,12 @@
-package org.indyscala.dataser.protobuf
+package org.indyscala.dataser.scalapb
 
 import java.time.Instant
 
 import org.indyscala.dataser.data.{DataWriter, Sample, Telemetry}
-import org.indyscala.dataser.protobuf.telemetry.{Coordinates, Timestamp, Sample => PBSample}
+import org.indyscala.dataser.scalapb.telemetry.{Coordinates, Timestamp, Sample => PBSample}
 import scalapb.Encoding
 
-object Protobuf extends App {
+object ScalaPB extends App {
   private implicit def instantToTimestamp(i: Instant): Timestamp = Timestamp(msSinceEpoch = i.toEpochMilli)
 
   val samples: List[Sample] = Telemetry.samples()
