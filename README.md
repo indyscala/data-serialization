@@ -3,7 +3,8 @@
 Demonstrate conversion to and from several common data serialization
 formats from Scala.  Examples include:
 
- * JSON - [circe]
+* JSON - [circe]
+* [Protocol Buffers] - [ScalaPB]
 
 
 ## Converting GPX file to CSV
@@ -20,3 +21,5 @@ where `API_KEY` is a [LocationIQ] API key.
 [circe]: https://circe.github.io/circe/
 [gpsprune]: https://activityworkshop.net/software/gpsprune/
 [LocationIQ]: https://locationiq.com/
+[Protocol Buffers]: https://developers.google.com/protocol-buffers
+[ScalaPB]: https://scalapb.github.io/

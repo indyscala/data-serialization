@@ -29,3 +29,16 @@ lazy val circe = project
       , "io.circe" %% "circe-parser" % circeVer
     )
   )
+
+lazy val protobuf = project
+  .dependsOn(data)
+  .settings(
+    PB.targets in Compile := Seq(
+      scalapb.gen() -> (sourceManaged in Compile).value
+    ),
+    libraryDependencies ++= Seq(
+      "io.circe" %% "circe-core" % circeVer
+      , "io.circe" %% "circe-generic" % circeVer
+      , "io.circe" %% "circe-parser" % circeVer
+    )
+  )

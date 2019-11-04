@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package org.indyscala.dataser.protobuf;
+
+message Timestamp {
+  int64 msSinceEpoch = 1;
+}
+
+message Coordinates {
+  double latitude = 1;
+  double longitude = 2;
+  double elevation = 3;
+}
+
+message Sample {
+  Timestamp timestamp = 1;
+  int32 odometer = 2;
+  Coordinates coordinates = 3;
+  string location = 4;
+  float distance = 5;
+}
